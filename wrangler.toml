@@ -1,0 +1,13 @@
+name = "secure-worker"
+main = "src/index.js"
+compatibility_date = "2025-11-14"
+
+# Route for this Worker
+routes = [
+  { pattern = "tunnel.dvllm.com/secure*", zone_name = "dvllm.com" }
+]
+
+# R2 binding (matches your bucket + binding in the dashboard)
+[[r2_buckets]]
+binding = "FLAGS"
+bucket_name = "dvllm-flags"
